@@ -37,20 +37,50 @@ android {
     kotlinOptions {
         jvmTarget = '1.8'
     }
+
+    buildFeatures {
+        dataBinding true
+    }
 }
 
 dependencies {
 
+    // Kotlin
     implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
-    implementation 'androidx.core:core-ktx:1.7.0'
-    implementation 'androidx.appcompat:appcompat:1.4.0'
+
+    // Material
     implementation 'com.google.android.material:material:1.4.0'
+
+    // Activity
+    implementation "androidx.activity:activity-ktx:$activity_version"
+
+    // Appcompat
+    implementation "androidx.appcompat:appcompat:$appcompat_version"
+
+    // Constraintlayout
     implementation 'androidx.constraintlayout:constraintlayout:2.1.2'
 
+    // Core
+    implementation 'androidx.core:core-ktx:1.7.0'
+
+    // Fragment
+    implementation "androidx.fragment:fragment-ktx:$fragment_version"
+
+    // Lifecycle
     implementation "androidx.lifecycle:lifecycle-livedata-ktx:$lifecycle_version"
     implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:$lifecycle_version"
+    implementation "androidx.lifecycle:lifecycle-common-java8:$lifecycle_version"
 
+    // Loader
+    implementation "androidx.loader:loader:1.1.0"
 
+    // Navigation
+    implementation "androidx.navigation:navigation-fragment-ktx:$nav_version"
+    implementation "androidx.navigation:navigation-ui-ktx:$nav_version"
+
+    // Recyclerview
+    implementation "androidx.recyclerview:recyclerview:1.2.1"
+    
     // Koin
     implementation "io.insert-koin:koin-android:$koin_version"
 
